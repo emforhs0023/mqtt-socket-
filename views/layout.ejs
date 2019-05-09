@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/monitoring.css">
+    <link rel="stylesheet" href="/static/css/mtagSetting.css">
+    <link rel="stylesheet" href="/static/css/beaconSetting.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header style="background-color: #cee2f9">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                    <div style='float: left; width: 87%;'>
+                        <a class="navbar-brand" href="#" style='line-height: 50px;font-weight: 700;color: white;'>M-Tag</a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+
+                    <div>
+                        <form method="POST" action="/login/logout" >
+                            <input type="submit" value="LogOut" style="line-height: 58px;font-size: 1.25rem;font-weight: 700;border:0;background-color: #cee2f9 ;cursor:pointer; color:white; float: right;margin-left: 10px;">
+                        </form>
+                    </div>
+                    <div id="time" style='float: right'></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <%- body %>
+            </div>
+        </main>
+        <footer>
+            <div class="row">
+                <div id="footer" class="col-xs-12" style="background-color: #cee2f9">5</div>
+            </div>
+        </footer>
+        <%- script %>
+    </div>
+</body>
+</html>
